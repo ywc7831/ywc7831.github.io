@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Your Name</title>
+    <link>https://sourgough.mrph.dev/about/</link>
+    <description>Recent content in About on Your Name</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 Dec 1969 17:33:41 -0700</lastBuildDate><atom:link href="https://sourgough.mrph.dev/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://sourgough.mrph.dev/about/bio/</link>
+      <pubDate>Wed, 31 Dec 1969 17:33:41 -0700</pubDate>
+      
+      <guid>https://sourgough.mrph.dev/about/bio/</guid>
+      <description>This theme is targeted at PhD or post doc researchers. It allows for an easy way to display projects as well as publications. Through the use of dimensions metrics each publication with a DOI will automatically display citation statistics. This can be turned off in the config.toml.</description>
+    </item>
+    
+    <item>
+      <title>Education</title>
+      <link>https://sourgough.mrph.dev/about/education/</link>
+      <pubDate>Wed, 31 Dec 1969 17:33:40 -0700</pubDate>
+      
+      <guid>https://sourgough.mrph.dev/about/education/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
