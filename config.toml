@@ -1,4 +1,4 @@
-baseURL = "https://sourgough.mrph.dev"
+baseURL = "zen-dijkstra-628836.netlify.app"
 languageCode = "en-us"
 relativeURLs = true
 theme = "sourgough-starter"
