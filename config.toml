@@ -4,7 +4,7 @@ relativeURLs = true
 theme = "sourgough-starter"
 title = "Yu-Wen Chen"
 [markup.goldmark.renderer]
-unsafe = true
+unsafe = false
 [[menu.about]]
 identifier = "ordcidid"
 name = "OrcidID"
