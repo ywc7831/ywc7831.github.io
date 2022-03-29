@@ -27,7 +27,7 @@ sections:
   label: About
   create: all
   match: "**/*"
-upload_dir: static/images
+upload_dir: public/images
 public_path: "/images"
 front_matter_path: ''
 use_front_matter_path: false
