@@ -62,7 +62,7 @@ name = "Projects"
 url = "/projects/"
 [params]
 backgroundPath = "/images/img_8664.png"
-css = ["css/sourgough.css"]
+css = ["/css/sourgough.css"]
 dimensionCitations = true
 footerOffset = -60
 scholarStats = false
