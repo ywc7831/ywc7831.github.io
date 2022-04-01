@@ -9,8 +9,10 @@ photos:
 
 
 degrees:
-    This is an example University: 
-        Some degree I revieved: 2023
-        A different degree I recieved: 2023
+    list:
+        show: True
+        school: National Taiwan University
+        description: B.S. in Chemistry
+        year: 2023
 ---
 
