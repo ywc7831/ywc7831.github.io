@@ -51,62 +51,55 @@
         {{ if isset .Params "type" }} 
             <span class="type">[{{ .Params.type }}] </span>
         {{ end }}
-        <div class="row align-items-end">
-                {{ if isset .Params "link" }}
-                    {{ if isset .Params "doi" }}
-                        <div class="col-auto">
-                            <a href="{{ .Params.link }}" target="_blank">{{.Title | markdownify}}</a> 
-                        </div>
-                            {{ if .Site.Params.dimensionCitations }}
-                            <div class="col-auto" >
-                                <span
-                                class="__dimensions_badge_embed__"
-                                data-doi="{{.Params.doi}}"
-                                data-hide-zero-citations="true"
-                                data-style="small_rectangle"></span>
-                            </div>
-                        {{ end }}
-                    {{ else }}
-                        <div class="col-auto">
-                            <a href="{{ .Params.link }}" target="_blank">{{.Title | markdownify}}</a> 
-                        </div>
+
+        {{ with .Params.lists }}
+            {{ range $a := .}}
+            {{ range $paper := $a }}
+                
+                <div class="row align-items-end">
+                        {{ with .link }}
+                            {{ if isset $paper "doi" }}
+                                <div class="col-auto">
+                                    <a href="{{ $paper.link }}" target="_blank">{{ $paper.title | markdownify}}</a> 
+                                </div>
+                                
+                            {{ else }}
+                                <div class="col-auto">
+                                    <a href="{{ $paper.link }}" target="_blank">{{ $paper.title | markdownify}}</a> 
+                                </div>
+                            {{ end }}
+                        {{ else }}
+                            <span>{{ .title | markdownify }}</span>
+                        {{end}}
+                </div>
+                <div>
+                {{ $first := true }}
+                {{with .authors}}
+                    {{ range . }}
+                       {{.}}
                     {{ end }}
-                {{ else }}
-                    <span>{{ .Title | markdownify }}</span>
                 {{end}}
-        </div>
-        <div>
-        {{ $first := true }}
-        {{ range (.GetTerms "authors") }}
-            {{ if $first }}
-                {{ if eq .LinkTitle .Site.Title }} 
-                    <b>{{ .LinkTitle }}</b>
-                {{ else }}
-                    {{ .LinkTitle }} 
+                <br>
+                {{ with $paper.journal }}
+                    <em>{{ $paper.journal }} {{ $pubYear }}.</em>
                 {{ end }}
-                {{ $first = false }}
-            {{ else }}
-                {{ if eq .LinkTitle .Site.Title }} 
-                    | <b>{{ .LinkTitle }}</b>
-                {{ else }}
-                    | {{ .LinkTitle }} 
+                {{ with $paper.conference }}
+                    <em>{{ $paper.conference }} {{ $pubYear }}.</em>
                 {{ end }}
-            {{ end }}
+
+                {{ if isset .Params "pmid" }}
+                    <span>
+                        PMID: {{ .Params.PMID }}.
+                        
+                    </span>
+                {{ end }}
+                </div>
+
+            <br>
+            {{end}}
+            {{end}}
         {{ end }}
         <br>
-
-        <em>{{ .Params.Journal }} {{ $pubYear }}.</em>
-        {{ if isset .Params "pmid" }}
-            <span>
-                PMID: {{ .Params.PMID }}.
-                
-            </span>
-        {{ end }}
-        </div>
-        
-        
-        
-        <br><br>
     {{end}}
     
 </div>

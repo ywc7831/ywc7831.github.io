@@ -1,18 +1,27 @@
 ---
 title: "Education"
 date: 2020
+weight: 0
 draft: false
 
 photos:
-    Image1: /images/Untitled.png
-    Image2: /images/Untitled.png
-
+    Image: /images/Untitled.png
 
 degrees:
-    list:
-        show: True
-        school: National Taiwan University
-        description: B.S. in Chemistry
-        year: 2023
+    University (top):
+        show: true
+        school: University of Colorado Boulder
+        description: PhD student in Atmospheric and Oceanic Science
+        year: 2021
+    University (middle):
+        show: false
+        school: University of Colorado Boulder
+        description: MS in Atmospheric and Oceanic Science
+        year: 2021
+    University (last):
+        show: false
+        school: University of Colorado Boulder
+        description: BS in Atmospheric and Oceanic Science
+        year: 2021
 ---
 
