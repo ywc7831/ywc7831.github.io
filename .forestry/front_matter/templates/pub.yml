@@ -1,0 +1,22 @@
+---
+label: pub
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: doi
+  label: doi
+- type: number
+  name: PMID
+  label: PMID
+- type: text
+  name: journal
+  label: journal
+- type: list
+  name: authors
+  label: authors
